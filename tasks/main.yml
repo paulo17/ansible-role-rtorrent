@@ -37,4 +37,7 @@
 
 - name: "all | ensure ~/.rtorrent.rc configured"
   template: src=rtorrent.rc.j2 dest=~/.rtorrent.rc
+
+- name: "change root directory permissions"
+  file: path=/root owner=root group=root mode=0755
 ...
