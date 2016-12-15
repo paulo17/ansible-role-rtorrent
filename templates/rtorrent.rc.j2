@@ -144,3 +144,6 @@ system.file.allocate.set = {{ rtorrent_file_allocate }}
 # decent hash checking rate.
 #hash_max_tries = 10
 
+# Owncloud configuration
+system.method.set_key = event.download.finished, owncloud_scan, ”execute=sudo -u www-data /var/www/owncloud/occ files:scan --path='$1', $d.get_name”
+
